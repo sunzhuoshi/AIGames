@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/game/2048-ai/2048-ai",
+    "pages/game/card_duel/card_duel",
+    "pages/game/fb-ql/fb-ql",
+    "pages/game/common/common"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

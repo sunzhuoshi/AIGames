@@ -1,0 +1,51 @@
+/**index.wxss**/
+.intro_banner {
+  width: 100%;
+  height: 282rpx;
+}
+
+.intro_text_view {
+  font-size: 14px;
+  margin: 20rpx 40rpx 0 40rpx;
+}
+
+.separator {
+  background: #EEEEEE; 
+  width: 100%; 
+  height: 2px;
+  margin: 0 0;
+}
+
+.game_icon {
+  width: 192rpx;
+  height: 192rpx;
+  border-radius: 10rpx;
+  flex: 0 0 auto;
+}
+
+.game_item {
+  margin: 40rpx 20rpx 40rpx 20rpx;
+}
+
+.game_item_top {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.game_info {
+  margin: 0 20rpx;
+}
+
+.game_name {
+  font-size: 14px;
+  display: block;
+}
+
+.game_desc {
+  font-size: 14px;
+  color: #888888;
+}
+
+.view_button {
+  font-size: 14px;
+}
