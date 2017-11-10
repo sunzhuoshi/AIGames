@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      url: "https://gifer.cn"
+      url: getApp().globalData.currentGameUrl
     })
   },
 
@@ -21,7 +21,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    wx.showToast({
+      title: '加载准备',
+    });      
   },
 
   /**

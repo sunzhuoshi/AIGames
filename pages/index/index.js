@@ -9,10 +9,10 @@ Page({
   onLoad: function () {
   },
   viewGame: function(event) {
-    var gameId = event.currentTarget.dataset.id;
+    app.globalData.currentGameUrl = event.currentTarget.dataset.url;
 
     wx.navigateTo({
-      url: '../game/' + gameId + '/' + gameId
+      url: '../game/common/common'
     });
   }
 })
