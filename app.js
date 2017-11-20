@@ -1,9 +1,34 @@
 //app.js
+var config = require('./config.js')
+
 App({
   onLaunch: function () {
+    wx.showLoading({
+      title: '连接中...'
+    })
+    wx.request({
+      url: config.URL_TOKEN + '?v=' + config.VERSION,
+      method: 'GET',
+      success: (res) => {
+        if (res.statusCode === 200) {
+          this.globalData.token = res.data.token
+        }
+      },
+      fail: (err) => {
+        console.log(err)
+      },
+      complete: () => {
+        wx.hideLoading()
+        if (this.globalData.token) {
+          this.globalData.gameList.forEach((el) => {
+            el.game_url += '/index_static.html'
+          })
+        }            
+      }
+    })
   },
   globalData: {
-    currentGameUrl: '',
+    token: 1,
     gameList: [
       {
         id: '2048-ai',

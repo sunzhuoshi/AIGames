@@ -2,12 +2,12 @@
 <view>
   <image class="intro_banner" src="../../images/bannder.jpg"/>
   <view class="intro_text_view">
-    <text>欢迎使用人工智能游戏小程序，这里展示了人工智能在游戏中的应用。</text>
+    <text>欢迎使用人工智能游戏小程序，这里介绍了人工智能常用算法在游戏中的应用。</text>
   </view>
   <image class="separator" src="../../images/separator.png"/>
 </view>
 <scroll-view scroll-y>
-<view class="game_item" wx:for="{{gameList}}" wx:for_index="index"> 
+<view class="game_item" wx:for="{{gameList}}" wx:for_index="index" wx:key="name"> 
   <div class="game_item_top">
     <image class="game_icon" src="../../{{item.icon_url}}"/>
     <div class="game_info">  
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="game_item_bottom">
-    <button class="view_button" data-id="{{item.id}}" data-url="{{item.game_url}}" bindtap="viewGame">查看</button>
+    <button class="view_button" data-id="{{item.id}}" data-url="{{item.game_url}}" data-name="{{item.name}}" bindtap="viewGame">查看</button>
   </div>
   <image class="separator" src="../../images/separator.png"/>  
 </view>
